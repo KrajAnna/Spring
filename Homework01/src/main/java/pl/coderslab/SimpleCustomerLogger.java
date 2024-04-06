@@ -11,4 +11,10 @@ public class SimpleCustomerLogger implements CustomerLogger {
     public void log() {
         System.out.println(LocalDateTime.now() + " :customer operation");
     }
+
+    @Override
+    public void log(String operation, boolean success) {
+        System.out.println(LocalDateTime.now() + ": customer operation: " + operation + " status: " + success);
+
+    }
 }
