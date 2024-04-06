@@ -8,4 +8,9 @@
 </bean>
     <bean id="messageService" class ="pl.coderslab.beans.EmailService">
     </bean>
+    <bean id="messageSender" class="pl.coderslab.beans.MessageSender">
+        <constructor-arg ref="messageService"/>
+        <constructor-arg name="message" value="Message from xml"/>
+    </bean>
+
 </beans>
