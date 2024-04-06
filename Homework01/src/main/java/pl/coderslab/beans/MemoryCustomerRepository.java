@@ -1,6 +1,9 @@
-package pl.coderslab;
+package pl.coderslab.beans;
 
 import org.springframework.stereotype.Component;
+import pl.coderslab.Customer;
+import pl.coderslab.CustomerLogger;
+import pl.coderslab.CustomerRepository;
 
 import java.util.HashSet;
 import java.util.List;

@@ -1,7 +1,8 @@
-package pl.coderslab;
+package pl.coderslab.beans;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
+import pl.coderslab.CustomerLogger;
 
 import java.time.LocalDateTime;
 

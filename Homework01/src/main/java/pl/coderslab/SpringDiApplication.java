@@ -1,6 +1,8 @@
 package pl.coderslab;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import pl.coderslab.beans.FileCustomerLogger;
+import pl.coderslab.beans.SimpleCustomerLogger;
 
 
 public class SpringDiApplication {
@@ -17,6 +19,8 @@ public class SpringDiApplication {
         customerRepository.remove(customer);
         customerRepository.remove(customer);
 
+        FileCustomerLogger fileCustomerLogger = context.getBean(FileCustomerLogger.class);
+        fileCustomerLogger.log();
 
         context.close();
     }
