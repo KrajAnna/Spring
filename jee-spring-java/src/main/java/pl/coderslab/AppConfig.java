@@ -16,5 +16,15 @@ public class AppConfig {
         return new HelloWorld();
     }
 
+    @Bean
+    public Captain jackSparrow() {
+        return new Captain();
+    }
+
+    @Bean
+    public Ship blackPearl() {
+        return new Ship(jackSparrow());
+    }
+
 
 }
