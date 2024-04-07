@@ -18,4 +18,12 @@ public class HelloController {
         log.info("Request came to /hello endpoint");
         return "Hello World";
     }
+
+    @GetMapping("/helloView")
+    public String helloWorldView() {
+        log.info("Request came to /helloView endpoint");
+        return "home";
+    }
+
+
 }
