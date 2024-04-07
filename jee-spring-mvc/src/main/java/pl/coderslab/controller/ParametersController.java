@@ -10,18 +10,27 @@ import java.util.random.RandomGenerator;
 
 @Controller
 public class ParametersController {
-    @GetMapping("random/{max}")
+    @GetMapping("/random/{max}")
     @ResponseBody
     public String randomMax(@PathVariable int max) {
         int random = RandomGenerator.getDefault().nextInt(1, max);
         return "Użytkownik podał wartość %s. Wylosowano liczbę: %s".formatted(max, random);
     }
 
-    @GetMapping("random/{min}/{max}")
+    @GetMapping("/random/{min}/{max}")
     @ResponseBody
     public String randomMinMax(@PathVariable int min, @PathVariable int max) {
         int random = RandomGenerator.getDefault().nextInt(min, max + 1);
-        return "Użytkownik podał wartość %s. Wylosowano liczbę: %s".formatted(max, random);
+        return "Użytkownik podał wartości min: %s i max: %s. Wylosowano liczbę: %s".formatted(min, max, random);
     }
+
+    @GetMapping("/hello/{firstName}/{lastName}")
+    @ResponseBody
+    public String helloMinMax(@PathVariable String firstName, @PathVariable String lastName) {
+        return "Witaj %s %s!".formatted(firstName, lastName);
+    }
+
+
+
 
 }
