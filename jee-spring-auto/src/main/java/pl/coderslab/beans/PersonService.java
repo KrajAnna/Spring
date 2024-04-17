@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Getter
 public class PersonService {
-    private PersonRepository personRepository;
+    private final PersonRepository personRepository;
 
 
     //@Autowired
