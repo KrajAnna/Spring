@@ -15,7 +15,7 @@ import java.util.Random;
 
 @Controller
 public class HelloController {
-    private String filePath = "Workers.txt";
+    private final String filePath = "Workers.txt";
 
     @GetMapping("/workers")
     public String workersAction(Model model) {
