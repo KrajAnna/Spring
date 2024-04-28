@@ -12,13 +12,18 @@
     <title>Shopping</title>
 </head>
 <body>
-<c:choose>
-    <c:when test="${isPresent}">
-        Produkt ${product} został dodany do koszyka.
-    </c:when>
-    <c:otherwise>
-        Produkt o id ${id} nie został znaleziony
-    </c:otherwise>
-</c:choose>
+<p>
+    <c:choose>
+        <c:when test="${isPresent}">
+            Produkt ${product} został dodany do koszyka.
+        </c:when>
+        <c:otherwise>
+            Produkt o id ${id} nie został znaleziony
+        </c:otherwise>
+    </c:choose>
+</p>
+
+<p><a href="/cart">Przejdz do koszyka</a></p>
+<p><a href="/products">Lista produktów</a></p>
 </body>
 </html>

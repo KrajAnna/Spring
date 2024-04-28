@@ -14,7 +14,10 @@
 <body>
 <c:forEach items="${products}" var="p">
 <p>
-<c:out value="${p.name}"/>: <c:out value="${p.price}"/> zł
+ ID   <c:out value="${p.id}"/>: <c:out value="${p.name}"/>- <c:out value="${p.price}"/> zł
+    <a href="/addtocart?id=${p.id}&qty=1">Dodaj 1 sztukę</a>
+    <a href="/addtocart?id=${p.id}&qty=-1">Usuń 1 sztukę</a>
+    <a href="/remove?id=${p.id}">Usuń produkt z koszyka sztukę</a>
 </p>
 </c:forEach>
 </body>

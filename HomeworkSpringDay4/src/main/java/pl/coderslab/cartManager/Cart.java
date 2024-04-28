@@ -33,4 +33,7 @@ public class Cart {
     public Integer getCartSize (){
         return cartItems.size();
     }
+    public void remove(Long id){
+        cartItems.removeIf(item -> item.getProduct().getId().equals(id));
+    }
 }

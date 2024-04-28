@@ -64,10 +64,16 @@ public class CartController {
         try {
             productDao.addProduct(product, Double.parseDouble(price));
             return "Produkt dodany do listy produktów";
-        } catch (NumberFormatException e){
+        } catch (NumberFormatException e) {
             return "Niewłaściwy format ceny";
         }
 
+    }
+
+    @RequestMapping("/remove")
+    public String removeProduct(@RequestParam String id) {
+        cart.remove(Long.parseLong(id));
+        return "cart";
     }
 
     private final static String PRODUCT_TEMPLATE = """
